@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1c1b1f;
+  --color-secondary: #4b2e39;
+  --color-heading: #d4af37;
+  --color-primary-text: #f5eedc;
+  --color-captions: #bcaaa4;
+  --color-button-hover: #8d6e63;
+  --color-button: #a67c52;
+  --color-cta: #c87f0a;
+  --color-tags: #b23a48;
+  --color-gradient: linear-gradient(
+    135deg,
+    #1c1b1f 0%,
+    #4b2e39 40%,
+    #8d6e63 75%,
+    #1c1b1f 120%
+  );
+
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-sm: 2px;
+  --breakpoint-md: 799px;
+}
+
+.global-padding {
+  @apply px-4 md:px-8 lg:px-16;
+}
+
+.global-section {
+  @apply my-20;
+}
+
+.shadow-card {
+  box-shadow: 2px 2px 5px 0 var(--color-primary);
+}
+
+body {
+  background: var(--color-gradient);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: var(--font-poppins);
+}
+
+.table-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.table-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-cta);
+  border-radius: 6px;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-tags);
+}
+
+option {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.my-swiper .swiper-pagination {
+  position: absolute !important;
+  bottom: 0px !important;
+  text-align: center;
+  width: 100%;
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary) !important;
+  border-radius: 50%;
+  margin-inline: 4px;
+  opacity: 0.5;
+}
+
+.custom-bullet-active {
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary-text) !important;
+  opacity: 1;
+}
+
+@media (max-width: 530px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .someyend {
+    max-width: 97%;
+  }
+}
