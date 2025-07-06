@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useCartStore } from "../../store/store";
 import { toast } from "react-toastify";
 import { NavigationContext } from "../../context/NavigationContext";
+import { backendURL } from "../../apiurls";
 
 const MenuItem = ({ item }) => {
   const addToCart = useCartStore((state) => state.addToCart);
@@ -29,7 +30,7 @@ const MenuItem = ({ item }) => {
       className="flex bg-white/10 text-primary-text rounded-2xl shadow-lg h-[250px] overflow-hidden relative"
     >
       <img
-        src={`http://localhost:2632/${item.image}`}
+        src={`${backendURL}/${item.image}`}
         alt="Dish"
         className="w-1/2 object-cover"
       />
