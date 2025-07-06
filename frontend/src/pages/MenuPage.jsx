@@ -13,7 +13,7 @@ const MenuPage = () => {
   const fetchItems = async () => {
     try {
       const response = await axios.get(
-        `${backendURL}/menu/getallitems?category=${selectedCategory}`
+        `${backendURL}/api/menu/getallitems?category=${selectedCategory}`
       );
       if (response.data.success) {
         setFilteredItems(response.data.data.menuItems);
